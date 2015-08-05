@@ -10,7 +10,9 @@ the System Preferences Network tab).  It updates roughly every 3 seconds.
 
 ## Installation
 
-Download Network Interface Menubar.app from releases.
+1. Download [Network Interface Menubar.app.tgz](https://github.com/g-k/network-interface-menubar/releases/download/0.1.0/Network.Interface.Menubar.app.tgz) from releases.
+1. Double click to unarchive the app.
+1. Drag to Applications
 
 ## Developer Instructions
 
