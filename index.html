@@ -1,0 +1,63 @@
+<html>
+<head>
+<title>Wired Status</title>
+</head>
+<style>
+body {
+	font-color: lightgray;
+	font-family: monospace;
+	background-color: darkgray;
+}
+</style>
+<body>
+	<div>
+		<h4>Default Network Interface</h4>
+
+		<dl>
+			<dt>Name</dt>
+			<dd id="name"></dd>
+
+			<dt>Type</dt>
+			<dd id="type"></dd>
+
+			<dt>IP Address</dt>
+			<dd id="ip_address"></dd>
+
+			<dt>MAC Address</dt>
+			<dd id="mac_address"></dd>
+
+			<dt>Netmask</dt>
+			<dd id="netmask"></dd>
+
+			<dt>Gateway IP</dt>
+			<dd id="gateway_ip"></dd>
+		</dl>
+	</div>
+</body>
+<script>
+var ipc = require('ipc');
+
+var ifaceProperties = [
+  "name",
+  "type",
+  "ip_address",
+  "mac_address",
+  "netmask",
+  "gateway_ip"
+];
+
+ipc.on('default-network-state', function(messageJSON) {
+  var message = JSON.parse(messageJSON);
+
+  for (var i = 0; i < ifaceProperties.length; i++) {
+    var ipropName = ifaceProperties[i];
+    var el = document.getElementById(ipropName);
+    if (message && message[ipropName]) {
+      el.textContent = message[ipropName];
+    } else {
+      el.textContent = "Unknown";
+    }
+  }
+});
+</script>
+</html>
