@@ -6,7 +6,7 @@ network interface (this might be problem if you're
 then bought a rather expensive thunderbolt to ethernet adapter and
 expected Ubuntu-style network menubar to tell you when you have a
 wired connection and don't want to buy a separate mac app or toggle to
-the System Preferences Network tab).
+the System Preferences Network tab).  It updates roughly every 3 seconds.
 
 ## Installation
 
