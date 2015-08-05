@@ -8,6 +8,16 @@ expected Ubuntu-style network menubar to tell you when you have a
 wired connection and don't want to buy a separate mac app or toggle to
 the System Preferences Network tab).  It updates roughly every 3 seconds.
 
+## Screenshots
+
+<img src="disconnected-collapsed.png?raw=true" alt="" width=450>
+
+<img src="wired-collapsed.png?raw=true" alt="" width=450>
+
+<img src="wired-expanded.png?raw=true" alt="" width=450>
+
+<img src="wireless-expanded.png?raw=true" alt="" width=450>
+
 ## Installation
 
 1. Download [Network Interface Menubar.app.tgz (36 MB)](https://github.com/g-k/network-interface-menubar/releases/download/0.1.0/Network.Interface.Menubar.app.tgz) from releases.
