@@ -1,0 +1,14 @@
+{
+  "name": "network-interface-menubar",
+  "version": "0.1.0",
+  "description": "Network Interface menubar",
+  "dependencies": {
+    "menubar": "*",
+    "network": "^0.1.3"
+  },
+  "devDependencies": {
+    "electron-packager": "^4.0.2",
+    "electron-prebuilt": "0.26.1"
+  },
+  "main": "main.js"
+}
