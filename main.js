@@ -1,5 +1,6 @@
 var path = require('path');
 
+var ipc = require('ipc');
 var menubar = require('menubar');
 var network = require('network');
 
@@ -13,7 +14,7 @@ var mb = menubar({
   dir: __dirname,
   icon: icons.unknown,
   width: 350,
-  height: 200,
+  height: 250,
 });
 
 var pollFrequency = 3000; // ms between checks
@@ -39,4 +40,9 @@ var updateIcon = function () {
 
 mb.on('ready', function ready () {
   setTimeout(updateIcon, pollFrequency);
+});
+
+
+ipc.on('quit', function() {
+  mb.app.quit();
 });

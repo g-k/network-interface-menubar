@@ -32,6 +32,8 @@ body {
 			<dt>Gateway IP</dt>
 			<dd id="gateway_ip"></dd>
 		</dl>
+
+		<button id="quit">Quit</button>
 	</div>
 </body>
 <script>
@@ -59,5 +61,10 @@ ipc.on('default-network-state', function(messageJSON) {
     }
   }
 });
+
+var quitButton = document.getElementById('quit');
+quitButton.onclick = function () {
+  ipc.send('quit');
+};
 </script>
 </html>
